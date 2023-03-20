@@ -1,0 +1,91 @@
+/*CLIENTS*/
+.clients {
+  background-color: var(--bg-light-silver);
+}
+.clients__container {
+  margin: 0 auto;
+  padding: 100px 50px;
+  max-width: 1210px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.clients-top {
+  margin-bottom: 80px;
+}
+.clients-nav-link {
+  display: inline-block;
+  margin-bottom: 40px;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 33px;
+  color: var(--color-title-services);
+}
+.clients-top__text {
+  font-family: "Merriweather", Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 69px;
+  color: var(--color-text-333);
+}
+/*clients-slider*/
+.clients-swiper {
+  width: 100%;
+}
+.clients-swiper-wrapper {
+  margin-bottom: 50px;
+}
+.clients-swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clients-swiper-img {
+  max-width: 243px;
+}
+
+/*swiper-navigation*/
+.clients-swiper-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.clients-swiper-pgn {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  column-gap: 40px;
+}
+.clients-swiper-pgn {
+  position: static;
+  height: 60px;
+}
+#clients-swiper-pgn .swiper-pagination-bullet {
+  margin: 0;
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent);
+  transition: opacity 0.3s ease-in-out;
+}
+.clients-swiper-pgn .swiper-pagination-bullet:hover {
+  opacity: 0.6;
+}
+/*swiper-btns*/
+.clients-swiper-btns {
+  display: flex;
+}
+.clients-swiper-btn {
+  position: static;
+  margin: 0;
+  width: 60px;
+  height: 60px;
+  background-color: var(--accent);
+  transition: opacity 0.3s ease-in-out;
+}
+.clients-swiper-btn:hover {
+  opacity: 0.6;
+}
+.clients-swiper-btn::after {
+  font-size: 16px;
+  color: var(--white);
+}

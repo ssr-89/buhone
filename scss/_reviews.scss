@@ -1,0 +1,123 @@
+/*REVIEWS*/
+.reviews {
+  background-color: var(--white);
+}
+.reviews__container {
+  margin: 0 auto;
+  padding: 140px 50px;
+  max-width: 1210px;
+}
+.reviews-top {
+  margin-bottom: 80px;
+}
+.reviews-top__link {
+  display: inline-block;
+  margin-bottom: 40px;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 33px;
+  color: var(--color-title-services);
+}
+.reviews-top__title {
+  font-family: "Merriweather", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 69px;
+  color: var(--color-text-333);
+}
+.reviews-swiper {
+  width: 100%;
+}
+.reviews-swiper-wrapper {
+  margin-bottom: 50px;
+}
+.reviews-swiper-slide {
+  padding: 45px 95px;
+  background-color: var(--bg-light-silver);
+}
+.reviews-swiper-slide__review {
+  margin-bottom: 58px;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 25px;
+}
+.review-author {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  column-gap: 35px;
+}
+.review-author__photo {
+  width: 80px;
+  height: 80px;
+}
+.review-author__data {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-flow: column nowrap;
+  gap: 10px;
+}
+.review-author__name {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 25px;
+}
+.review-author__profession {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #4f4f4f;
+}
+
+/*reviews-swiper-navigation*/
+.reviews-swiper-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reviews-swiper-pgn {
+  position: static;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  column-gap: 40px;
+  height: 60px;
+}
+#reviews-swiper-pgn .swiper-pagination-bullet {
+  margin: 0;
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent);
+  transition: opacity 0.3s ease-in-out;
+}
+.reviews-swiper-pgn .swiper-pagination-bullet:hover {
+  opacity: 0.6;
+}
+
+/*reviews-swiper-btns*/
+.reviews-swiper-btns {
+  display: flex;
+}
+.reviews-swiper-btn {
+  position: static;
+  margin: 0;
+  width: 60px;
+  height: 60px;
+  background-color: var(--accent);
+  transition: opacity 0.3s ease-in-out;
+}
+.reviews-swiper-btn:hover {
+  opacity: 0.6;
+}
+.reviews-swiper-btn::after {
+  font-size: 16px;
+  color: var(--white);
+}

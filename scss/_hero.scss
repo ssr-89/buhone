@@ -1,0 +1,107 @@
+/*HERO*/
+.hero {
+  background-image: url("../img/hero/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.hero__container {
+  margin: 0 auto;
+  padding: 170px 40px 113px;
+  max-width: 1210px;
+}
+.hero-swiper {
+  width: 100%;
+}
+.hero-swiper-wrapper {
+  margin-bottom: 60px;
+}
+.hero-swiper-slide {
+  padding: 0 10px;
+}
+.hero-swiper-slide-title {
+  margin-bottom: 80px;
+  width: 60%;
+  font-family: "Merriweather", Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 66px;
+  color: var(--white);
+}
+.hero-swiper-slide-btn {
+  position: relative;
+  padding: 19px 56px;
+  background-color: var(--accent);
+  transition: background 0.3s ease-in-out;
+}
+.hero-swiper-slide-btn::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  z-index: 100000;
+  transition: border 0.3s ease-in-out;
+}
+.hero-swiper-slide-btn span {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  color: var(--white);
+}
+.hero-swiper-slide-btn:focus:not(:hover)::before {
+  border: 1px solid var(--accent);
+}
+.hero-swiper-slide-btn:hover {
+  background-color: var(--accent-hover);
+}
+
+/*hero-swiper-navigation*/
+.hero-swiper-navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+}
+#hero-swiper-pgn {
+  position: static;
+  display: flex;
+  align-items: end;
+  column-gap: 40px;
+  height: 60px;
+}
+#hero-swiper-pgn .swiper-pagination-bullet {
+  margin: 0;
+  background-color: var(--white);
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+#hero-swiper-pgn .swiper-pagination-bullet:hover {
+  opacity: 0.4;
+}
+.hero-swiper-nav-btns {
+  display: flex;
+}
+.hero-swiper-nav-btn {
+  position: static;
+  margin: 0;
+  width: 60px;
+  height: 60px;
+  background-color: var(--white-opacity);
+  transition: background 0.3s ease-in-out;
+}
+.hero-swiper-nav-btn::after {
+  font-size: 14px;
+  color: var(--white);
+  transition: color 0.3s ease-in-out;
+}
+.hero-swiper-nav-btn:focus {
+  background-color: var(--light-white-opacity-8);
+}
+.hero-swiper-nav-btn:hover {
+  background-color: var(--white-opacity-hover);
+}

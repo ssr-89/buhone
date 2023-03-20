@@ -1,0 +1,20 @@
+/*FOOTER*/
+.footer {
+  background-color: var(--white);
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 50px 50px 40px;
+  max-width: 1210px;
+}
+.footer__text {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19px;
+}
+
+/*font-family: "Lato", Arial, Helvetica, sans-serif;*/
+/*font-family: "Merriweather", Arial, Helvetica, sans-serif;*/

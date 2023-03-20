@@ -1,0 +1,268 @@
+/*ABOUT*/
+.about {
+  background-color: var(--white);
+}
+.about__container {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: var(--about-gap);
+  margin: 0 auto;
+  padding: 140px 50px;
+  max-width: 1210px;
+
+  --about-gap: 30px;
+  --about-elem: 2;
+}
+.about-nav-link {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 33px;
+  color: var(--color-title-services);
+}
+/*about-top*/
+.about-top {
+  padding-right: 95px;
+  width: calc((100% - (var(--about-elem) - 1) * var(--about-gap)) / (var(--about-elem)));
+  min-height: 564px;
+}
+.about-top.about-top-hidden {
+  display: none;
+}
+.about-top__title {
+  margin-bottom: 40px;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--color-title-services);
+}
+.about-top__descr {
+  margin-bottom: 60px;
+  font-family: "Merriweather", Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 70px;
+  color: var(--color-text-333);
+}
+.about-top__descr span {
+  color: var(--accent);
+}
+.about-top__text-link {
+  position: relative;
+  display: inline-block;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 25px;
+  color: var(--black);
+  text-decoration: none;
+  transition: text-decoration 0.3s ease-in-out;
+}
+.about-top__text-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.about-top__text-link:hover {
+  text-decoration: underline;
+}
+
+/*about-cards*/
+.about-cards {
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--about-cards-gap);
+  --about-cards-gap: 30px;
+  --about-cards-elem: 2;
+
+  width: calc((100% - (var(--about-elem) - 1) * var(--about-gap)) / (var(--about-elem)));
+  min-height: 564px;
+}
+.about-cards.about-cards-hidden {
+  display: none;
+}
+.about-card {
+  position: relative;
+  padding: 30px 40px 40px;
+  min-height: 255px;
+  width: calc((100% - (var(--about-cards-elem) - 1) * var(--about-cards-gap)) / (var(--about-cards-elem)));
+  background-color: var(--bg-light-silver);
+  transition: background 0.3s ease-in-out;
+}
+.about-card__title {
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 55px;
+  letter-spacing: 0.1em;
+  transition: color 0.3s ease-in-out;
+}
+.about-card__text {
+  margin-bottom: 47px;
+  width: 107px;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  transition: color 0.3s ease-in-out;
+}
+.about-card__link {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  transition: color 0.3s ease-in-out;
+}
+.about-card__link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.about-card:hover {
+  background-color: var(--accent);
+}
+.about-card:hover .about-card__title,
+.about-card:hover .about-card__text,
+.about-card:hover .about-card__link {
+  color: var(--white);
+}
+.about-card__btns {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.about-card__btns.about-hid-card-btns {
+  display: none;
+}
+.about-card-btn {
+  display: none;
+  padding: 10px 20px;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  background-color: var(--bg-light-silver);
+  border: 1px solid var(--bg-light-silver);
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+.about-card-btn:focus {
+  background-color: transparent;
+}
+.about-show-btn.hidden_show-btn {
+  display: none;
+}
+.about-hidden-btn.visible_hidden-btn {
+  display: inline-block;
+}
+
+/*about-top-descr*/
+.about-top-descr {
+  display: none;
+}
+.about-top-descr.about-top-descr-vis {
+  display: block;
+}
+.about-top-descr-nav {
+  margin-bottom: 40px;
+}
+.about-top-descr-nav__link span {
+  position: relative;
+  z-index: 1;
+}
+.about-top-descr-nav__link span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-title-services);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.about-top-descr-nav__link:hover span::after {
+  transform: scaleX(1);
+}
+.about-top-descr__title {
+  margin-bottom: 61px;
+  font-family: "Merriweather", Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 69px;
+  color: var(--color-text-333);
+}
+.about-top-descr__text {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 25px;
+}
+.about-top-descr__text:not(:last-child) {
+  margin-bottom: 2em;
+}
+
+/*about-lists-cases*/
+.about-lists-cases {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transform: translateY(0%) scale(0);
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+.about-lists-cases.open-lists-cases {
+  transform: translateY(0%) scale(100%);
+  background-color: var(--bg-open-card);
+}
+.about-list-cases {
+  position: relative;
+  padding: 50px;
+  max-width: 1210px;
+  display: none;
+  background-color: var(--white);
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.about-list-cases.open-list-cases {
+  display: block;
+}
+.about-list-cases__title {
+  margin-bottom: 1em;
+  font-family: "Merriweather", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--color-text-333);
+}
+.about-list-cases__case {
+  display: flex;
+  align-items: center;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 2em;
+}
+.about-list-cases__close-btn {
+  position: absolute;
+  top: 29px;
+  right: 35px;
+  font-size: 2em;
+  line-height: 1em;
+  color: var(--color-text-333);
+  transition: color 0.3s ease-in-out;
+}
+.about-list-cases__close-btn:hover {
+  color: var(--silver);
+}
+
+/*font-family: "Merriweather", Arial, Helvetica, sans-serif;*/
