@@ -31,6 +31,19 @@ document.addEventListener('DOMContentLoaded', function () {
       nextEl: '.hero-swiper-nav-btn--next',
       prevEl: '.hero-swiper-nav-btn--prev',
     },
+
+    breakpoints: {
+      320: {
+        pagination: {
+          enabled: false,
+        },
+      },
+      1080: {
+        pagination: {
+          enabled: true,
+        },
+      },
+    }
   });
 
 
@@ -59,14 +72,26 @@ document.addEventListener('DOMContentLoaded', function () {
       320: {
         slidesPerView: 1,
         slidesPerGroup: 1,
+        pagination: {
+          type: 'fraction',
+          clickable: false,
+        },
       },
       576: {
         slidesPerView: 2,
         slidesPerGroup: 2,
+        pagination: {
+          type: 'fraction',
+          clickable: false,
+        },
       },
       1080: {
         slidesPerView: 4,
         slidesPerGroup: 4,
+        pagination: {
+          type: 'bullets',
+          clickable: true,
+        },
       },
     }
   });
@@ -92,5 +117,17 @@ document.addEventListener('DOMContentLoaded', function () {
       nextEl: '.reviews-swiper-btn--next',
       prevEl: '.reviews-swiper-btn--prev',
     },
+    breakpoints: {
+      320: {
+        pagination: {
+          enabled: false,
+        },
+      },
+      1080: {
+        pagination: {
+          enabled: true,
+        },
+      },
+    }
   });
 });
