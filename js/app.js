@@ -55,9 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const servicesTop = document.querySelector('.services-top');
   const openCardBtns = document.querySelectorAll('.open-card-btn');
   const servicesContent = document.querySelectorAll('.services-list__item');
-  const servicesNavLinks = document.querySelectorAll(
-    '.services-list__nav-link'
-  );
+  const servicesNavLinks = document.querySelectorAll('.services-list__nav-link');
 
   openCardBtns.forEach(function (openCardBtn) {
     openCardBtn.addEventListener('click', (e) => {
@@ -264,6 +262,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+
+  const backUp = document.getElementById('up');
+
+  window.addEventListener('scroll', function () {
+    if (window.pageYOffset > 100) {
+      backUp.style.display = 'block';
+    } else {
+      backUp.style.display = 'none';
+    }
+  });
+
+  // backUp.addEventListener('click', function () {
+  //   window.scrollTo(0, 0);
+  // });
 
 
   document.addEventListener("focus", function (event) {
