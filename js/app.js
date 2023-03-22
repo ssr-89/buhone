@@ -278,6 +278,63 @@ document.addEventListener('DOMContentLoaded', () => {
   // });
 
 
+  /*CONTACTS*/
+  const contactsForm = document.getElementById('contactsForm');
+  contactsForm.addEventListener('submit', formSend);
+
+  async function formSend(e) {
+    e.preventDefault();
+
+    let error = formValidate(contactsForm);
+
+    if (error === 0) {
+      contactsForm.classList.add('_sending');
+      let response = await fetch('sendmail.php', {
+        method: 'POST',
+      });
+      if (response.ok) {
+        let result = await response.json();
+        alert(result.message);
+        contactsForm.reset();
+        contactsForm.classList.remove('_sending');
+      } else {
+        alert('Ошибка');
+        contactsForm.classList.remove('_sending');
+      }
+    } else {
+      alert('Заполните обязательные поля');
+    }
+  }
+
+  function formValidate(contactsForm) {
+    let error = 0;
+    let formReq = document.querySelectorAll('._req');
+
+    for (let i = 0; i < formReq.length; i++) {
+      const input = formReq[i];
+      formRemoveError(input);
+
+      if (input.getAttribute("type") === "checkbox" && input.checked === false) {
+        formAddError(input);
+        error++;
+      } else {
+        if (input.value === '') {
+          formAddError(input);
+          error++;
+        }
+      }
+    }
+    return error;
+  }
+  function formAddError(input) {
+    input.parentElement.classList.add('_error');
+    input.classList.add('_error');
+  }
+  function formRemoveError(input) {
+    input.parentElement.classList.remove('_error');
+    input.classList.remove('_error');
+  }
+
   document.addEventListener("focus", function (event) {
     console.log("Фокус на элементе: ", event.target);
   }, true);

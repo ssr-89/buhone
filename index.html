@@ -906,23 +906,23 @@
             </div>
           </div>
           <div class="contacts__feedback contacts-feedback">
-            <form class="contacts-feedback__form contacts-form" action="#" method="post">
+            <form id="contactsForm" class="contacts-feedback__form contacts-form" action="#" method="post">
               <div class="contacts-form__userdata">
                 <div class="contacts-form__block">
-                  <label class="contacts-form__title">Имя</label>
-                  <input type="text" class="contacts-form__input contacts-form-input contacts-form-input--name input" required placeholder="Иван">
+                  <label for="inputName" class="contacts-form__title">Имя</label>
+                  <input id="inputName" name="name" type="text" class="_req contacts-form__input contacts-form-input contacts-form-input--name input" placeholder="Иван">
                 </div>
                 <div class="contacts-form__block">
-                  <label class="contacts-form__title">Фамилия</label>
-                  <input type="text" class="contacts-form__input contacts-form-input contacts-form-input--name input" required placeholder="Иванов">
+                  <label for="inputSurname" class="contacts-form__title">Фамилия</label>
+                  <input id="inputSurname" name="surname" type="text" class="_req contacts-form__input contacts-form-input contacts-form-input--name input" placeholder="Иванов">
                 </div>
               </div>
               <div class="contacts-form__block contacts-form__block--text">
-                <label class="contacts-form__title">Сообщение</label>
-                <textarea class="contacts-form__text contacts-form-input contacts-form-input--text input" required placeholder="Ваше сообщение"></textarea>
+                <label for="inputMessage" class="contacts-form__title">Сообщение</label>
+                <textarea id="inputMessage" name="message" class="contacts-form__text contacts-form-input contacts-form-input--text input" placeholder="Ваше сообщение"></textarea>
               </div>
               <div class="contacts-form__block contacts-form__block--btn">
-                <button type="submit" class="contacts-form__btn btn">
+                <button class="contacts-form__btn btn">
                   <span>Отправить&nbsp;сообщение</span>
                 </button>
               </div>

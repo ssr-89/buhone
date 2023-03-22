@@ -84,6 +84,23 @@
   max-width: 540px;
   width: 100%;
 }
+.contacts-form::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-open-card) url("../img/contacts/load.gif") center/50px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.contacts-form._sending::after {
+  opacity: 1;
+  visibility: visible;
+}
 .contacts-form__block {
   display: flex;
   flex-flow: column nowrap;
@@ -97,6 +114,9 @@
 .contacts-form__userdata .contacts-form__block {
   max-width: 255px;
   width: 100%;
+}
+.contacts-form-input--name._error {
+  box-shadow: 0 0 15px red;
 }
 .contacts-form-input--name {
   width: 100%;
